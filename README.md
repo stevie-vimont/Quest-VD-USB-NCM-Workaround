@@ -35,18 +35,15 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Quest_VD_USB_NCM_Worka
 
 The script requests administrator elevation automatically.
 
-When prompted, select the **main Wi-Fi adapter** if one is available. Its usual
-Windows alias is `Wi-Fi`.
-
-The Wi-Fi adapter does **not** need to be connected to a wireless network.
-
 Then:
 
 1. Connect the Quest with the optical/AOC USB cable and start Virtual Desktop.
 2. Verify that "Allow to connect over USB" is checked in settings tab.
-3. Run this script on your computer and select the target network adapter.
+3. When prompted by the script ,select a target network adapter. Wi-fi usually works.
 4. If the connect/disconnect loop does not occur, replug the cable once.
 5. Let the script run until Quest USB NCM is detected.
+
+**Note** : The target network adapter does not need to be connected to a network during the process.
 
 ## What the script does
 
