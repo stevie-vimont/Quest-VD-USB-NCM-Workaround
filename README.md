@@ -42,9 +42,11 @@ The Wi-Fi adapter does **not** need to be connected to a wireless network.
 
 Then:
 
-1. Connect the Quest with the optical/AOC USB cable.
-2. Start Virtual Desktop in the headset.
-3. Let the script run until Quest USB NCM is detected.
+1. Connect the Quest with the optical/AOC USB cable and start Virtual Desktop.
+2. Verify that "Allow to connect over USB" is checked in settings tab.
+3. Run this script on your computer and select the target network adapter.
+4. If the connect/disconnect loop does not occur, replug the cable once.
+5. Let the script run until Quest USB NCM is detected.
 
 ## What the script does
 
@@ -56,28 +58,18 @@ Then:
 Quest NCM detection is restricted to Meta/Oculus USB vendor ID `VID_2833`;
 no Quest product PID is hard-coded.
 
-## What the script does not change
-
-The script does not modify:
-
-- Registry settings
-- IP addresses
-- Routes
-- Firewall rules
-- Drivers
-- Windows services
-
 ## Notes and limitations
 
 This is a community workaround, not a fix for the underlying Meta USB
 enumeration behavior.
 
 Results can vary with Quest firmware, Windows/NDIS versions, network drivers,
-Wi-Fi implementations, active optical cable electronics, and enterprise
-security policies.
+Wi-Fi implementations, active optical cable electronics.
 
 On some systems, toggling Ethernet may not trigger the workaround while
 toggling the main Wi-Fi interface does.
 
 No script can guarantee restoration if PowerShell is forcibly terminated or the
 computer is shut down while the selected adapter is being toggled.
+
+![screenshot](screenshot.png)
